@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boka vistelse - Bonz.ai</title>
+    <link rel="icon" href="./assets/logo/bonz.ai-logo-black-symbol.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html">Hem</a>
+            <a href="./about.html">Om oss</a>
+            <a href="./booking.html" class="nav-selected">Boka</a>
+        </nav>
+    </header>
+    <main class="booking-main">
+        <section class="booking-main__search">
+            <h2>Sök</h2>
+            <form action="">
+                <label for="checkin">Checka in</label>
+                <input type="date" name="checkin" id="checkin">
+                <label for="checkout">Checka ut</label>
+                <input type="date" name="checkout" id="checkout">
+                <label for="adults">Vuxna</label>
+                <select name="adults" id="adults">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <label for="children">Barn</label>
+                <select name="children" id="children">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <label for="rooms">Rum</label>
+                <select name="rooms" id="rooms">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+                <button type="button" class="styled-btn">Hitta tillgängliga rum</button>
+            </form>
+        </section>
+        <hr>
+        <section class="booking-main__results">
+            <h2>Tillgängliga rum</h2>
+            <article>
+                <img src="./assets/photos/01-night.jpg" alt="">
+                <h3>Enkelrum</h3>
+                <p>7 tillgängliga</p>
+                <a href="" class="styled-btn">Boka</a>
+            </article>
+            <article>
+                <img src="./assets/photos/01-night.jpg" alt="">
+                <h3>Dubbelrum</h3>
+                <p>3 tillgängliga</p>
+                <a href="" class="styled-btn">Boka</a>
+            </article>
+            <article>
+                <img src="./assets/photos/01-night.jpg" alt="">
+                <h3>Deluxsvit</h3>
+                <p>1 tillgänglig</p>
+                <a href="" class="styled-btn">Boka</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section class="location">
+            <h3>Hitta oss</h3>
+            <address>
+                Hotel Bonzai
+                <br>
+                Väggatan 66
+                <br>
+                123 45 Karesuando Sverige
+            </address>
+        </section>
+        <section class="contact">
+            <h3>Kontakta oss</h3>
+            <address>
+                +46 1 234 5678
+                <br>
+                bonz@ai.se
+            </address>
+        </section>
+    </footer>
+</body>
+</html>

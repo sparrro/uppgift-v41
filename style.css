@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;700&family=Frank+Ruhl+Libre:wght@700;900&family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+:root {
+    --soft-black: rgba(0, 0, 0, 0.75);
+    --logo-teal: rgba(85, 234, 189, 1);
+    --soft-white: rgba(255, 255, 255, 0.95)
+}
+
+.styled-btn {
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--soft-black);
+    color: var(--soft-white);
+    margin: auto 0 1rem auto;
+    border-radius: 1rem;
+    box-shadow: -1rem 0 var(--logo-teal);
+    border: 0.5rem solid var(--logo-teal);
+    transition: 0.5s linear;
+}
+
+.styled-btn:hover {
+    box-shadow: 1rem 0 var(--logo-teal);
+    background-color: var(--soft-white);
+    color: var(--soft-black);
+    transform: translateX(-1rem);
+}
+
+h1 {
+    color: var(--soft-white);
+    text-align: center;
+    line-height: 5rem;
+}
+
+header {
+    height: 7rem;
+    background-color: var(--soft-black);
+    position: relative;
+    background-image: url('./assets/logo/bonz.ai-logo-color-landscape.png');
+    background-repeat: no-repeat;
+    background-position: center 0.5rem;
+    background-size: auto 4.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--logo-teal);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.nav-selected {
+    color: var(--soft-white);
+}
+
+nav>a {
+    text-decoration: none;
+    color: var(--soft-black);
+}
+
+nav>a:hover {
+    color: var(--soft-white);
+}
+
+.index-main {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+        "hero hero"
+        "index-first-img index-first"
+        "index-first-hr index-first-hr"
+        "index-second index-second-img"
+        "index-second-hr index-second-hr"
+        "index-third-img index-third";
+}
+
+.index-main section {
+    display: flex;
+    flex-direction: column;
+}
+
+.index-main section>* {
+    margin-bottom: 1rem;
+}
+
+.index-main img {
+    width: 100%;
+}
+
+.hero {
+    grid-area: hero;
+    background-image: url(./assets/photos/09-day.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25rem;
+    padding-right: 25%;
+}
+
+.hero h2 {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.hero p {
+    text-align: center;
+}
+
+.hero a {
+    margin: 3rem auto;
+}
+
+.index-main__first, .index-main__second, .index-main__third, .index-main>img {
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.index-main img:nth-child(2) {
+    grid-area: index-first-img;
+}
+
+.index-main__first {
+    grid-area: index-first;
+}
+
+.index-main hr:nth-child(4) {
+    grid-area: index-first-hr;
+}
+
+.index-main img:nth-child(5) {
+    grid-area: index-second-img;
+}
+
+.index-main__second {
+    grid-area: index-second;
+}
+
+.index-main hr:nth-child(7) {
+    grid-area: index-second-hr;
+}
+
+.index-main img:nth-child(8) {
+    grid-area: index-third-img;
+}
+
+.index-main__third {
+    grid-area: index-third;
+}
+
+.about-main {
+    margin: 1rem;
+}
+
+.about-main>* {
+    margin-bottom: 2rem;
+}
+
+.about-main__intro * {
+    margin-bottom: 1rem;
+}
+
+.about-main__rooms {
+    display: grid;
+    grid-template-areas:
+        "room-title room-title room-title"
+        "room-text room-text room-text"
+        "single-room double-room suite"
+    ;
+    text-align: center;
+}
+
+.about-main__rooms h2 {
+    grid-area: room-title;
+    margin-bottom: 1rem;
+}
+
+.about-main__rooms p {
+    grid-area: room-text;
+    margin-bottom: 1rem;
+}
+
+.about-main__rooms article:nth-child(3) {
+    grid-area: single-room;
+}
+
+.about-main__rooms article:nth-child(4) {
+    grid-area: double-room;
+}
+
+.about-main__rooms article:nth-child(5) {
+    grid-area: suite;
+}
+
+.about-main__rooms img {
+    width: 100%;
+}
+
+.about-main__restaurant {
+    display: grid;
+    grid-template-areas:
+        "restaurant-title restaurant-title restaurant-title"
+        "restaurant-text restaurant-text restaurant-text"
+        "breakfast lunch dinner"
+    ;
+    text-align: center;
+}
+
+.about-main__restaurant h2 {
+    grid-area: restaurant-title;
+    margin-bottom: 1rem;
+}
+
+.about-main__restaurant p {
+    grid-area: restaurant-text;
+    margin-bottom: 1rem;
+}
+
+.about-main__restaurant article:nth-child(3) {
+    grid-area: breakfast;
+}
+
+.about-main__restaurant article:nth-child(4) {
+    grid-area: lunch;
+}
+
+.about-main__restaurant article:nth-child(5) {
+    grid-area: dinner;
+}
+
+.about-main article {
+    width: 90%;
+    margin: auto;
+}
+
+.booking-main__search h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.booking-main__search {
+    padding: 2rem;
+}
+
+.booking-main__search form {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45rem;
+    grid-template-areas:
+        "checkin-label checkin checkout-label checkout"
+        "adults-label adults children-label children"
+        "rooms-label rooms . search-button"
+    ;
+    grid-gap: 1rem;
+}
+
+.booking-main__search label:nth-child(1) {
+    grid-area: checkin-label;
+}
+
+.booking-main__search input:nth-child(2) {
+    grid-area: checkin;
+}
+
+.booking-main__search label:nth-child(3) {
+    grid-area: checkout-label;
+}
+
+.booking-main__search input:nth-child(4) {
+    grid-area: checkout;
+}
+
+.booking-main__search label:nth-child(5) {
+    grid-area: adults-label;
+}
+
+.booking-main__search select:nth-child(6) {
+    grid-area: adults;
+}
+
+.booking-main__search label:nth-child(7) {
+    grid-area: children-label;
+}
+
+.booking-main__search select:nth-child(8) {
+    grid-area: children;
+}
+
+.booking-main__search label:nth-child(9) {
+    grid-area: rooms-label;
+}
+
+.booking-main__search select:nth-child(10) {
+    grid-area: rooms;
+    height: fit-content;
+}
+
+.booking-main__search button {
+    grid-area: search-button;
+}
+
+.booking-main__search label {
+    text-align: end;
+}
+
+.booking-main__search select, .booking-main__search input {
+    height: fit-content;
+    width: fit-content;
+}
+
+.booking-main__results {
+    display: grid;
+    grid-template-areas:
+        "results-title results-title results-title"
+        "single-results double-results deluxe-results"
+    ;
+    grid-gap: 2rem;
+    padding: 2rem;
+}
+
+.booking-main__results img {
+    width: 100%;
+}
+
+.booking-main__results>* {
+    margin: 1rem 0;
+}
+
+.booking-main__results h2 {
+    grid-area: results-title;
+    text-align: center;
+}
+
+.booking-main__results article:nth-child(2) {
+    grid-area: single-results;
+}
+
+.booking-main__results article:nth-child(3) {
+    grid-area: double-results;
+}
+
+.booking-main__results article:nth-child(4) {
+    grid-area: deluxe-results;
+}
+
+.booking-main__results article {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--soft-black);
+    color: white;
+    padding: 1rem;
+    border-top: 1rem solid var(--logo-teal);
+}
+
+@media screen and (max-width: 600px) {
+
+    .index-main {
+        grid-template-areas:
+            "hero"
+            "index-first-img"
+            "index-first"
+            "index-second-img"
+            "index-second"
+            "index-third-img"
+            "index-third";
+        grid-gap: 0;
+    }
+
+    .index-main>img {
+        margin: 2rem 0;
+    }
+
+    .hero a {
+        margin-top: 0;
+    }
+
+    .about-main__rooms {
+        grid-template-areas:
+            "room-title"
+            "room-text"
+            "single-room"
+            "double-room"
+            "suite"
+        ;
+    }
+
+    .about-main__restaurant {
+        grid-template-areas:
+            "restaurant-title"
+            "restaurant-text"
+            "breakfast"
+            "lunch"
+            "dinner"
+        ;
+    }
+
+    .booking-main__search form {
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-areas:
+            "checkin-label checkin"
+            "checkout-label checkout"
+            "adults-label adults"
+            "children-label children"
+            "rooms-label rooms"
+            "search-button search-button"
+        ;
+        grid-gap: 1rem;
+    }
+
+    .booking-main__results {
+        grid-template-areas:
+            "results-title"
+            "single-results"
+            "double-results"
+            "deluxe-results"
+        ;
+    }
+}
